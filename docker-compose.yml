@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  go-playground:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./playground:/go/playground
+    env_file:
+      - .go_env
+    tty: true
