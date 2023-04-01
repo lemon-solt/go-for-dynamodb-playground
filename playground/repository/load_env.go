@@ -8,9 +8,9 @@ import (
 )
 
 type SettingList struct {
-	Region          string
-	Aws_seacret_key string
-	Aws_access_key  string
+	Region        string
+	AwsSeacretKey string
+	AwsAccessKey  string
 }
 
 var EnvSetting = new(SettingList)
@@ -21,8 +21,8 @@ func LoadEnv() {
 		fmt.Printf("env read failed: %v", err)
 	}
 
-	EnvSetting.Aws_access_key = os.Getenv("aws_access_key_id")
+	EnvSetting.AwsAccessKey = os.Getenv("aws_access_key_id")
 	EnvSetting.Region = os.Getenv("region")
-	EnvSetting.Aws_seacret_key = os.Getenv("aws_secret_access_key")
+	EnvSetting.AwsSeacretKey = os.Getenv("aws_secret_access_key")
 
 }

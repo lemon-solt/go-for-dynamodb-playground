@@ -11,4 +11,6 @@ func init() {
 
 func main() {
 	fmt.Println("envsetting: ", repository.EnvSetting)
+	// client.SimpleScanRead()
+	// client.SimpleQueryRead()
 }
